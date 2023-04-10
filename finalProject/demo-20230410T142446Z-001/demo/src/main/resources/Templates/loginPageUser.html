@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Centered Buttons</title>
+  <style>
+    /* Center the buttons both horizontally and vertically */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Style the buttons */
+    input {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+<form action="/signUpUser" method="get">
+  <input type="submit" value="Sign Up">
+</form>
+<form action="/signInUser" method="get">
+  <input type="submit" value="Sign In ">
+</form>
+</body>
+</html>
