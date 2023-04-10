@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collection List</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            margin-bottom: 20px;
+            width: 300px;
+            font-size: 18px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #1e90ff;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+<form action="/collection/list" method="post">
+    <label for="db_name">Database name:</label>
+    <input type="text" name="db_name" id="db_name">
+    <input type="submit" value="Show List">
+</form>
+</body>
+</html>

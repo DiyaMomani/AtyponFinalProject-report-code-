@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 200px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+        }
+        .input-group input[type="text"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<form method="post" action="/document/addStore">
+    <div class="input-group">
+        <input type="text" name="building_name" placeholder="Building Name">
+    </div>
+    <div class="input-group">
+        <input type="text" name="store_id" placeholder="Id">
+    </div>
+    <div class="input-group">
+        <input type="text" name="area" placeholder="Area">
+    </div>
+    <div class="input-group">
+        <input type="text" name="height" placeholder="Height">
+    </div>
+    <button type="submit">submit</button>
+</form>
+</body>
+</html>

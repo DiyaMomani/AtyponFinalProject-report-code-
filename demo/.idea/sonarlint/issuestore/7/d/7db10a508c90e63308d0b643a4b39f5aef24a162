@@ -1,0 +1,25 @@
+
+^
+java:S1192"HDefine a constant instead of duplicating this literal "entered" 4 times.(¸Üğ­
+_
+java:S1192""IDefine a constant instead of duplicating this literal "USERNAME" 3 times.(õƒÌ 
+\
+java:S1192#"FDefine a constant instead of duplicating this literal "TOKEN" 3 times.(Ê„öö
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã–Æµ
+f	java:S117@"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âúëö
+f	java:S117@"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âúëö
+f	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢½ÓŞ
+f	java:S117f"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“§ö
+f	java:S117f"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“§ö
+U
+java:S1854'":Remove this useless assignment to local variable "mapper".(ĞÏáúÿÿÿÿ
+F
+java:S1481'"+Remove this unused "mapper" local variable.(ĞÏáúÿÿÿÿ
+^
+java:S1128"ARemove this unused import 'com.example.demo.Building.Department'.(ã©ª¹8ªÏåö0
+Y
+java:S1128"<Remove this unused import 'com.example.demo.Building.Store'.(î·Ä»8­Ïåö0
+l
+java:S1128"ORemove this unused import 'com.fasterxml.jackson.module.jsonSchema.JsonSchema'.(”Ÿ©ç8¯Ïåö0
+u
+java:S1128"XRemove this unused import 'com.fasterxml.jackson.module.jsonSchema.JsonSchemaGenerator'.(ÿ¨›Ğ8°Ïåö0

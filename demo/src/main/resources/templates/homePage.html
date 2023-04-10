@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        input {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <form action="/loginPageAdmin" method="get">
+        <input type="submit" value="Admin">
+    </form>
+    <form action="/loginPageUser" method="get">
+        <input type="submit" value="User">
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+^
+java:S1192"HDefine a constant instead of duplicating this literal "entered" 5 times.(“°ˆ«
+b
+java:S1192%"GDefine a constant instead of duplicating this literal "result" 3 times.(½”•Ñùÿÿÿÿ
+f	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡÷Œ–
+k	java:S1170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈÈåµøÿÿÿÿ
+f	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âÕ­Ù
+S
+java:S1854"=Remove this useless assignment to local variable "userToken".(“°ˆ«
+D
+java:S1481".Remove this unused "userToken" local variable.(“°ˆ«
+S
+java:S1854,"=Remove this useless assignment to local variable "userToken".(“°ˆ«
+D
+java:S1481,".Remove this unused "userToken" local variable.(“°ˆ«
+S
+java:S18544"=Remove this useless assignment to local variable "userToken".(“°ˆ«
+D
+java:S14814".Remove this unused "userToken" local variable.(“°ˆ«
+S
+java:S1854="=Remove this useless assignment to local variable "userToken".(“°ˆ«
+D
+java:S1481=".Remove this unused "userToken" local variable.(“°ˆ«
+S
+java:S1854C"=Remove this useless assignment to local variable "userToken".(“°ˆ«
+D
+java:S1481C".Remove this unused "userToken" local variable.(“°ˆ«
+C
+java:S1068"(Remove this unused "type" private field.(–î†ûÿÿÿÿ

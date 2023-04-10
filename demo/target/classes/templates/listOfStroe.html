@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>List</title>
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Area</th>
+    <th>Height</th>
+  </tr>
+  </thead>
+  <tbody>
+  <th:block th:each="node : ${list}">
+    <tr>
+      <td th:text="${node.Id}"></td>
+      <td th:text="${node.area}"></td>
+      <td th:text="${node.height}"></td>
+    </tr>
+  </th:block>
+  </tbody>
+</table>
+</body>
+</html>

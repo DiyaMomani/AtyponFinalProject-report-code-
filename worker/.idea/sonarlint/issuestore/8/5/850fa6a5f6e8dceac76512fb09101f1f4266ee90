@@ -1,0 +1,30 @@
+
+h
+java:S1192"MDefine a constant instead of duplicating this literal "/false/false" 8 times.(Ä„ÚÃûÿÿÿÿ
+k
+java:S1192ˆ"ODefine a constant instead of duplicating this literal "broadCast done" 3 times.(±§Ùûÿÿÿÿ
+m
+java:S1192("WDefine a constant instead of duplicating this literal "broadCast failed : 500" 3 times.(¼¹—¶
+l
+java:S1192k"QDefine a constant instead of duplicating this literal "broadCast failed" 5 times.(ªŸ õøÿÿÿÿ
+^
+java:S1192µ"GDefine a constant instead of duplicating this literal "DELETE" 3 times.(şêŞ¹
+d
+java:S1192"IDefine a constant instead of duplicating this literal "USERNAME" 8 times.(Å×•ûÿÿÿÿ
+a
+java:S1192"FDefine a constant instead of duplicating this literal "TOKEN" 8 times.(±İªÒúÿÿÿÿ
+h
+java:S11925"MDefine a constant instead of duplicating this literal "Content-Type" 3 times.(­†õÊşÿÿÿÿ
+l
+java:S11925"QDefine a constant instead of duplicating this literal "application/json" 3 times.(­†õÊşÿÿÿÿ
+k
+java:S1192+"UDefine a constant instead of duplicating this literal "broadCast done : 200" 3 times.(™ø¨È
+f	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦ˆØª
+f	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØùÙ€
+l	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡²Æğüÿÿÿÿ
+g	java:S117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ“Ğ
+l	java:S117Ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù°ÖÙÿÿÿÿÿ
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨Ø¤
+i	java:S100Š"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡²Æğüÿÿÿÿ
+‚
+java:S2178†"fCorrect this "&" to "&&" and extract the right operand to a variable if it should always be evaluated.(şş¾èúÿÿÿÿ

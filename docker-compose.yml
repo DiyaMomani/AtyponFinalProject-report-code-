@@ -1,0 +1,51 @@
+version: '3'
+services:
+
+  worker_0:
+    build: ./worker
+    container_name: worker0
+    restart: always
+    ports:
+      - "8080:8080"
+  
+  worker_1:
+    build: ./worker
+    container_name: worker1
+    restart: always
+    ports:
+      - "8081:8080"
+  
+  worker_2:
+    build: ./worker
+    container_name: worker2
+    restart: always
+    ports:
+      - "8082:8080"
+
+  worker_3:
+    build: ./worker
+    container_name: worker3
+    restart: always
+    ports:
+      - "8083:8080"
+  web:
+    build: ./demo
+    container_name: web
+    restart: always
+    ports:
+      - 8084:8084
+    depends_on:
+      - bootstrap
+
+  bootstrap:
+    build: ./bootstrap
+    container_name: bootstrap
+    restart: always
+    ports:
+      - "6060:6060"
+    depends_on:
+      - worker_0
+      - worker_1
+      - worker_2
+      - worker_3
+  

@@ -1,0 +1,43 @@
+
+u
+java:S1192@"ZDefine a constant instead of duplicating this literal "no database or collection" 3 times.(»Ü‰¿øÿÿÿÿ
+k
+java:S1192N"UDefine a constant instead of duplicating this literal "chooseOperationAdmin" 4 times.(›…ç¡
+a
+java:S1192K"FDefine a constant instead of duplicating this literal "admin" 4 times.(ÀæƒÓùÿÿÿÿ
+^
+java:S1192""HDefine a constant instead of duplicating this literal "entered" 8 times.(“°ˆ«
+c
+java:S1192%"HDefine a constant instead of duplicating this literal "result" 11 times.(«‹£èÿÿÿÿÿ
+h
+java:S1192&"MDefine a constant instead of duplicating this literal "responsePage" 8 times.(Ã„ç´ÿÿÿÿÿ
+k	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õıÈøÿÿÿÿ
+k	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èÿ¯õúÿÿÿÿ
+e	java:S1179"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–ÖƒH
+f	java:S117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âÕ­Ù
+f	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç¤±œ
+k	java:S117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’àş•ıÿÿÿÿ
+k	java:S117o"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôÈ¾šûÿÿÿÿ
+f	java:S117p"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âÕ­Ù
+h	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õıÈøÿÿÿÿ
+S
+java:S1854""=Remove this useless assignment to local variable "userToken".(“°ˆ«
+D
+java:S1481"".Remove this unused "userToken" local variable.(“°ˆ«
+h	java:S100)"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èÿ¯õúÿÿÿÿ
+S
+java:S1854+"=Remove this useless assignment to local variable "userToken".(“°ˆ«
+D
+java:S1481+".Remove this unused "userToken" local variable.(“°ˆ«
+S
+java:S18544"=Remove this useless assignment to local variable "userToken".(“°ˆ«
+D
+java:S14814".Remove this unused "userToken" local variable.(“°ˆ«
+S
+java:S1854="=Remove this useless assignment to local variable "userToken".(“°ˆ«
+D
+java:S1481=".Remove this unused "userToken" local variable.(“°ˆ«
+;
+java:S1075C"&Remove this hard-coded path-delimiter.(’™¬
+C
+java:S1068"(Remove this unused "type" private field.(–î†ûÿÿÿÿ
