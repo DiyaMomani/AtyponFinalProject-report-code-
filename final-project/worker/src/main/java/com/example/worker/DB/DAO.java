@@ -2,6 +2,7 @@ package com.example.worker.DB;
 
 import com.example.worker.Affinity.Affinity;
 import com.example.worker.Indexing.DbIndex;
+import com.example.worker.Synchronize.Locks;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
@@ -30,24 +31,31 @@ public class DAO {
     }
     public String createDatabase(String database) {
         File dbDir = new File( getPath(database,false) );
+        String path=database;
+        Object lock=Locks.getInstance().getLock(path);
+        synchronized (lock) {
+            if (dbDir.exists() && dbDir.isDirectory()) {
+                Locks.getInstance().deleteLock(path);
+                return "Database already exists";
+            }
 
-        if (dbDir.exists() && dbDir.isDirectory()) {
-            return "Database already exists";
-        }
-
-        if (!dbDir.mkdirs()) {
-            return "Error creating database";
-        } else {
-            File schemasDir = new File( getPath(database,true) );
-            System.out.println(getPath(database,true));
-            schemasDir.mkdirs();
-            Affinity.getInstance().updateAffinity();
-            return "Database created successfully";
+            if (!dbDir.mkdirs()) {
+                Locks.getInstance().deleteLock(path);
+                return "Error creating database";
+            } else {
+                File schemasDir = new File(getPath(database, true));
+                System.out.println(getPath(database, true));
+                schemasDir.mkdirs();
+                Affinity.getInstance().updateAffinity();
+                Locks.getInstance().deleteLock(path);
+                return "Database created successfully";
+            }
         }
     }
 
     public String addCollection(String Database, String Collection, String schema) {
-        File lock = new File(getPath(Database,false));
+        String path=Database;
+        Object lock=Locks.getInstance().getLock(path);
         synchronized (lock) {
             try {
                 File dbDir = new File(getPath(Database, false));
@@ -63,6 +71,7 @@ public class DAO {
                 File jsonFile = new File(getPath(Database, false) + '/' + Collection + ".json");
                 createEmptyJsonArray(jsonFile);
                 Affinity.getInstance().updateAffinity();
+                Locks.getInstance().deleteLock(path);
                 return "Collection created successfully";
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -102,7 +111,8 @@ public class DAO {
         // Close the scanner
         scanner.close();
         schemaCheck checker = new schemaCheck(Json,schemaFile);
-        File lock = new File(getPath(database,false) + '/' + Collection);
+        String path=database+"/"+Collection;
+        Object lock=Locks.getInstance().getLock(path);
         synchronized (lock) {
             if (checker.checkJson()) {
                 System.out.println("check done ");
@@ -124,9 +134,11 @@ public class DAO {
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
+                Locks.getInstance().deleteLock(path);
                 Affinity.getInstance().updateAffinity();
                 return "record added successfully";
             }
+            Locks.getInstance().deleteLock(path);
             return "Adding not valid";
         }
     }
@@ -139,7 +151,8 @@ public class DAO {
             return null;
         }
 
-        File lock = new File(getPath(Database,false) + '/' + Collection + ".json");
+        String path=Database+"/"+Collection+"/"+id;
+        Object lock=Locks.getInstance().getLock(path);
         synchronized (lock) {
             ObjectMapper objectMapper = new ObjectMapper();
             ObjectNode root = null;
@@ -152,7 +165,7 @@ public class DAO {
                 JsonNode jsonNode = myArray.get(idx);
                 if (idx != -1)
                     result = jsonNode.deepCopy();
-
+                Locks.getInstance().deleteLock(path);
                 return result;
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -199,9 +212,9 @@ public class DAO {
             if (nodeToUpdate == null) {
                 return "Id " + id + " not found";
             }
-            synchronized (nodeToUpdate) {
-
-
+            String path=database+"/"+Collection+"/"+id;
+            Object lock=Locks.getInstance().getLock(path);
+            synchronized (lock) {
                 ((ObjectNode) nodeToUpdate).put(Property, value);
 
                 try {
@@ -210,7 +223,9 @@ public class DAO {
                     throw new RuntimeException(e);
                 }
                 Affinity.getInstance().updateAffinity();
+                Locks.getInstance().deleteLock(path);
             }
+
             return "Update done";
 
     }
@@ -234,9 +249,11 @@ public class DAO {
 
 
         ObjectMapper objectMapper = new ObjectMapper();
-        File lock = new File(getPath(database,false) + '/' + Collection + ".json");
+        File Coll = new File(getPath(database,false) + '/' + Collection + ".json");
+        String path=database+"/"+Collection;
+        Object lock=Locks.getInstance().getLock(path);
         synchronized (lock) {
-            if(!lock.exists()) {
+            if(!Coll.exists()) {
                 return "Collection does not exist";
             }
 
@@ -263,6 +280,7 @@ public class DAO {
                 throw new RuntimeException(e);
             }
             Affinity.getInstance().updateAffinity();
+            Locks.getInstance().deleteLock(path);
             return "delete done";
         }
     }
@@ -303,7 +321,8 @@ public class DAO {
         File dbFile = new File(getPath(Database,false));
         if(!dbFile.exists() || !dbFile.isDirectory())
             return "Database: " + Database + " not exist";
-        File lock = new File(getPath(Database,false));
+        String path=Database;
+        Object lock=Locks.getInstance().getLock(path);
         synchronized (lock) {
             File schemaFile = new File(getPath(Database, true) + "/" + Collection + ".json");
             File jsonFile = new File(getPath(Database, false) + "/" + Collection + ".json");
@@ -311,22 +330,28 @@ public class DAO {
                 return "Collection: " + Collection + " not exist";
             schemaFile.delete();
             jsonFile.delete();
+            Locks.getInstance().deleteLock(path);
             return "dropping Collection done";
         }
     }
     @SneakyThrows
     public String dropDatabase(String Database){
         File dbFile = new File(getPath(Database,false));
-        if(!dbFile.exists() || !dbFile.isDirectory())
-            return "Database " + Database + " not exist";
-        Path path = Paths.get(getPath(Database , false));
-        Files.walk(path)
-                .sorted(java.util.Comparator.reverseOrder())
-                .map(Path::toFile)
-                .forEach(File::delete);
+        String path=Database;
+        Object lock=Locks.getInstance().getLock(path);
+        synchronized (lock) {
+            if (!dbFile.exists() || !dbFile.isDirectory())
+                return "Database " + Database + " not exist";
+            Path dbPath = Paths.get(getPath(Database, false));
+            Files.walk(dbPath)
+                    .sorted(java.util.Comparator.reverseOrder())
+                    .map(Path::toFile)
+                    .forEach(File::delete);
 
-        Affinity.getInstance().updateAffinity();
-        return "dropping Database done";
+            Affinity.getInstance().updateAffinity();
+            Locks.getInstance().deleteLock(path);
+            return "dropping Database done";
+        }
     }
     
     public ArrayNode getAllFrom(String Database, String Collection) {
