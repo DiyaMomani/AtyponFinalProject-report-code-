@@ -1,9 +1,0 @@
-
-k
-java:S1192V"UDefine a constant instead of duplicating this literal "user is Unauthorized" 4 times.(íˆ£¸
-k	java:S117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸ß«Éÿÿÿÿÿ
-k	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½ÒÚÛÿÿÿÿÿ
-k	java:S117R"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸ß«Éÿÿÿÿÿ
-g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ëğ«
-g	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±à²õ
-g	java:S117¡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨İ‘

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<form action="/database/create" method="get">
+    <input type="submit" value="Create Building">
+</form>
+<form action="/collection/create" method="get">
+    <input type="submit" value="Create Collection">
+</form>
+<form action="/record/add" method="get">
+    <input type="submit" value="Add facility">
+</form>
+<form action="/database/list" method="get">
+    <input type="submit" value="Get Buildings">
+</form>
+<form action="/collection/facilityType" method="get">
+    <input type="submit" value="Get facilities">
+</form>
+</body>
+</html>

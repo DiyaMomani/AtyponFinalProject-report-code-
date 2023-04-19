@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add record</title>
+    <style>
+        /* Center the buttons, textbox, and radio buttons both horizontally and vertically */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Style the buttons, textbox, and radio buttons */
+        input[type=text] {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        input[type=radio] {
+            margin-right: 5px;
+        }
+
+        input[type=submit] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<form action="/record/delete" method="post">
+    <input type="text" name="building_name" placeholder="Building name">
+    <label for="department">Allow Department:</label>
+    <input type="radio" id="department" name="permission" value="department">
+    <label for="store">Allow Store:</label>
+    <input type="radio" id="store" name="permission" value="store"><br>
+    <input type="text" name="id" placeholder="id">
+  <input type="submit" value="Delete">
+</form>
+</body>
+</html>

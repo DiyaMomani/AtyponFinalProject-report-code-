@@ -1,0 +1,7 @@
+com\example\worker\Indexing\CollIndex.class
+com\example\worker\Indexing\PropIndex.class
+com\example\worker\Controllers\AddController.class
+com\example\worker\DB\DAO.class
+com\example\worker\Indexing\DbIndex.class
+com\example\worker\Controllers\DeleteController.class
+com\example\worker\Controllers\GetController.class

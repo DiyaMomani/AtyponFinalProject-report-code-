@@ -1,5 +1,0 @@
-
-g	java:S1120"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8˜½¹åö0
-i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(©Ú¥Ô8™½¹åö0
-p	java:S116"ORename this field "Json" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ÿ®×ùÿÿÿÿ8©½¹åö0
-v	java:S116"URename this field "SchemaFile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öË·»þÿÿÿÿ8©½¹åö0
